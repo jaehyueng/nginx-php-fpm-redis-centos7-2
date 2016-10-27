@@ -13,6 +13,7 @@ RUN sed -i 's/listen.allowed_clients = 127.0.0.1/;listen.allowed_clients = 127.0
 RUN sed -i 's/;catch_workers_output = yes/catch_workers_output = yes/' /etc/php-fpm.d/www.conf
 RUN sed -i 's/php_admin_value\[error_log\]/;php_admin_value[error_log]/' /etc/php-fpm.d/www.conf
 RUN sed -i 's/php_admin_flag\[log_errors\]/;php_admin_flag[log_errors]/' /etc/php-fpm.d/www.conf
+RUN sed -i 's/;security.limit_extensions = .php .php3 .php4 .php5/security.limit_extensions = .cgi/' /etc/php-fpm.d/www.conf
 
 
 
